@@ -1,0 +1,466 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+#main {
+    display:grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+    "header"
+    "section"
+    "footer";
+}
+
+header {
+    grid-area: header;
+}
+section {
+    grid-area: section;
+}
+footer {
+    grid-area: footer;
+}
+
+@media screen and (min-width:320px) {
+    
+/*header*/
+    header {
+        position: relative;
+        background-color: #E5E1DC;
+        height: 80px;
+        width: 100%;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .logo {
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+
+    .boton {
+        display:flex;
+        margin-top: 25px;
+        margin-right: 25px;
+        cursor: pointer;
+        color: white;
+        background: none;
+        border:none;
+        font-size: 30px;
+        line-height: 60px;
+    }
+
+    .menuburguer {
+        display:none;
+        margin-right: 20px;
+        line-height: 80px;
+    }
+    
+    nav ul li a {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 16px;
+        color:azure;
+        padding:6px 10px;
+    }
+
+    .titulosmenu:hover {
+        color: white;
+        font-weight: bolder;
+    }
+
+    #burguer {
+        display:none;
+    }
+
+    #burguer:checked + .menuburguer {
+        position: absolute;
+        top:80px;
+        background: rgb(72, 137, 72);
+        opacity: 50%;
+        width:100%;
+        display:flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        z-index: 1;
+    }
+/*section*/
+    section{
+       width: 100%;
+       height: 100%;
+    }
+/*home*/
+    .portadahome {
+       width: 100%;
+       height: 600px;
+       background-image: url(../images/pexels-scott-webb-213727.jpg);
+       background-position:initial;
+       background-size: cover;
+    }
+
+    .titulohome {
+        font-family:Arial, Helvetica, sans-serif;
+        color:white;
+        font-size: 30px;
+        text-transform: uppercase;
+        text-align: center;
+        padding-top: 80px;
+    }
+
+    .textohome {
+       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+       font-size: 16px;
+       text-align: center;
+       color:grey;
+       margin: 30px;
+       background-color: white;
+       padding: 8px;
+       border-radius: 3px;
+    }
+
+    .textohome2 {
+       display:none;
+    }
+/*hola*/
+    .portadahola {
+        width: 100%;
+        height: 600px;
+        background-image: url(../images/pexels-content-pixie-2736497.jpg);
+        background-position:right;
+        background-size: cover;
+    }
+     
+    .titulohola { 
+         font-family:Arial, Helvetica, sans-serif;
+         color:rgb(53, 103, 87);
+         font-size: 30px;
+         text-transform: uppercase;
+         text-align: left;
+         padding-top: 400px;
+         padding-left: 50px;
+    }
+
+    #about {
+        display:none;
+    }
+
+    .ayur1 {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .elementosfeng {
+        width: 100%;
+        height:100%;
+    }
+    
+    .ayur2 {
+        width: 100%;
+        height: 100%;
+    }
+
+    #doshas {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+        justify-content: space-evenly;
+        align-content: space-evenly;
+        background-color: #bbcdce;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 15px;
+        color:WHITE;
+        text-transform: uppercase;
+        text-align: right;
+    }
+
+/*yoga*/
+    .portadayoga {
+       width: 100%;
+       height: 600px;
+       background-image: url(../images/pexels-mikhail-nilov-6740754.jpg);
+       background-position:center;
+       background-size: cover;
+    }
+ 
+    .tituloyoga { 
+       font-family:Arial, Helvetica, sans-serif;
+       color:white;
+       font-size: 30px;
+       text-align: center;
+       padding-top: 200px;
+    }
+
+    #sectionyoga1 {
+       display: grid;
+       grid-template-columns: auto auto;
+       grid-template-rows: auto auto auto;
+       justify-content: space-evenly;
+       align-content: space-evenly;
+       justify-items: center;
+       align-items: center;
+       margin: 10px;
+       row-gap: 5px;
+       column-gap: 5px;
+    }
+
+.texto1,
+.texto2,
+.texto3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    text-align: center;
+    color:grey;
+    background-color: #e7eaf2;
+    padding:3px;
+    border-radius: 8%;
+}
+
+.asana1,
+.asana2,
+.asana3 {
+    width: 150px;
+    height: 230px;
+    border-radius: 8px;
+}
+
+#sectionyoga2 {
+    display:none;
+}
+/*feng*/
+.portadafeng {
+    width: 100%;
+    height: 350px;
+    background-image: url(../images/portada2.jpg);
+    background-position:center;
+    background-size: cover;
+ }
+
+.sobrebagua,
+.sobreelementos,
+.sobrefilosofia {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    text-align: center;
+    color:grey;
+    background-color: #e7eaf2;
+    padding: 3px;
+    border-radius: 6%;
+}
+.elementos {
+    width: 140px;
+    height: 120px;
+    border-radius: 6%;
+}
+.deco {
+    width: 140px;
+    height: 160px;
+    border-radius: 6%;
+}
+.bagua {
+    width: 140px;
+    height: 140px;
+    border-radius: 6%;
+}
+
+#sectionfeng {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    justify-items: center;
+    align-items: center;
+    margin: 10px;
+    column-gap: 5px;
+    row-gap: 5px;
+}
+/*contacto*/
+.portadacontacto {
+    width: 100%;
+    height: 600px;
+    background-image: url(../images/sand-surface-texture-background-art-of-balance-concept.jpg);
+    background-position:center;
+    background-size: cover;
+ }
+ 
+ .contacto {
+     background-color:#bbcdce;
+     padding: 20px;
+     position: absolute;
+     text-align: right;
+     margin: 100px;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     font-size: 20px;
+     color:white;
+ }
+
+/*footer*/
+    footer{
+       background-color:#E5E1DC;
+       height: 100px;
+       width: 100%;
+    }
+
+    footer ul li{
+       margin: 35px;
+       display:flex;
+       justify-content:center; 
+       height: 25px;
+    }
+
+    .redes{
+       display: flex;
+       justify-content:center;
+       align-items: center;
+    }
+}
+
+@media screen and (min-width:980px) {
+    .boton {
+        display:none;
+    }
+    
+    .menuburguer {
+        display: flex;
+    }
+/*home*/
+    .textohome {
+        display:none;
+    }
+
+    .textohome2 {
+        display:flex;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 16px;
+        text-align: center;
+        color:grey;
+        margin: 30px;
+        background-color: white;
+    }
+/*hola*/
+    #about {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto;
+        padding: 20px;
+        justify-content: space-evenly;
+        align-content: space-evenly;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .textohola {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 16px;
+        text-align: center;
+        color:grey;
+        margin: 50px;
+    }
+    
+    .holaasana {
+        width: 350px;
+        height: 250px;
+    }
+
+    #doshas {
+    background-color: #bbcdce;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-rows: 50% 50%;
+    justify-content: stretch;
+    align-content: stretch;
+    justify-items: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    color:WHITE;
+    text-transform: uppercase;
+    }
+/*yoga*/
+    #sectionyoga1 {
+        display:none;
+    }
+
+    #sectionyoga2 {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto;
+        justify-content: space-evenly;
+        align-content: space-evenly;
+        justify-items: center;
+        align-items: center;
+        margin: 10px;
+        row-gap: 5px;
+        column-gap: 5px;
+     }
+
+    .texto1,
+.texto2,
+.texto3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    text-align: center;
+    color:grey;
+    background-color: #e7eaf2;
+    padding:5px;
+    border-radius: 10%;
+    margin:20px;
+}
+
+.asana1,
+.asana2,
+.asana3 {
+    width: 250px;
+    height: 350px;
+    margin: 20px;
+}
+.sobrebagua,
+.sobreelementos,
+.sobrefilosofia {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    text-align: center;
+    color:grey;
+    background-color: #e7eaf2;
+    padding: 6px;
+    border-radius: 8%;
+    margin: 50px;
+}
+.elementos {
+    width: 300px;
+    height: 250px;
+    border-radius: 8%;
+}
+.deco {
+    width: 300px;
+    height: 350px;
+    border-radius: 8%;
+}
+.bagua {
+    width: 300px;
+    height: 300px;
+    border-radius: 8%;
+}
+
+#sectionfeng {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    justify-items: center;
+    align-items: center;
+    margin: 20px;
+    column-gap: 5px;
+    row-gap: 5px;
+}
+}
